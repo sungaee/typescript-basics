@@ -1,0 +1,23 @@
+{
+  "name": "section1",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/sungaee/typescript-basics#readme",
+  "bugs": {
+    "url": "https://github.com/sungaee/typescript-basics/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sungaee/typescript-basics.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/node": "^26.1.2"
+  }
+}

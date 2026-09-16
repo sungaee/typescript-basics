@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es2025",
+    "module": "esnext",
+    "skipLibCheck": true,
+    "rootDir": "./src",
+    "outDir": "dist",
+    "strict": true,
+    "moduleDetection": "force"
+  },
+  "include": ["src"]
+}
