@@ -1,47 +1,62 @@
 /**
- * Unknown 타입
+ * 기본타입간의 호환성
  */
 
-function unknownExam() {
-  let a: unknown = 1
-  let b: unknown = 'hello'
-  let c: unknown = true
-  let d: unknown = null
-  let e: unknown = undefined
+type Animal = {
+  name: string
+  color: string
 }
+type Dog = {
+  name: string
+  color: string
+  breed: string
+}
+
+let animal: Animal = {
+  name: '기린',
+  color: 'yellow',
+}
+
+let dog: Dog = {
+  name: '뭉치',
+  color: 'white',
+  breed: '말티푸',
+}
+animal = dog
+// dog = animal;
+
+type ProgrammingBook = {
+  name: string
+  price: number
+  skill: string
+}
+
+let book: Book
+let programmingBook: ProgrammingBook = {
+  name: '리액트',
+  price: 33000,
+  skill: 'reactjs',
+}
+book = programmingBook
+// programmingBook = book;
 
 /**
- * Naver 타입
+ * 초과 프로퍼티 검사
  */
-function naverExam() {
-  function naverFunc(): never {
-    while (true) {}
-  }
-  let num: number = naverFunc()
-  let str: string = naverFunc()
-  let bool: boolean = naverFunc()
+type Book = {
+  name: string
+  price: number
 }
-
-/**
- * Void 타입
- */
-
-function voidExam() {
-  function voidFunc(): void {
-    console.log('hi')
-  }
-  let voidVar: void = undefined
+let book2: Book = {
+  name: '리액트',
+  price: 33000,
+  //   skill: 'reactjs',
 }
-
-/**
- * any 타입
- */
-function anyExam() {
-  let unknownVar: unknown
-  let anyVar: any
-  let undefinedVar: undefined
-  let neverVar: never
-  anyVar = unknownVar
-  undefinedVar = anyVar
-//   neverVar = anyVar
-}
+let book3: Book = programmingBook
+function func(book: Book) {}
+func({
+  name: '리액트',
+  price: 33000,
+  //   skill: 'reactjs',
+})
+func(programmingBook)
