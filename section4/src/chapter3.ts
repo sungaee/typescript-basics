@@ -17,7 +17,6 @@ function func(a:number, b?:number, c?:number) {
     }
 } 
 
-
 // func()
 func(1)
 // func(1,2)
