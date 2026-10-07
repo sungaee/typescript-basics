@@ -34,4 +34,4 @@ let var2 = getLength('hello world')
 
 let var3 = getLength({ length: 10 })
 
-let var4 = getLength(10)
+// let var4 = getLength(10)
